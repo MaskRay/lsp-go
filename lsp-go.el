@@ -70,7 +70,7 @@ defaults to half of your CPU cores."
                         :maxParallelism ,lsp-go-max-parallelism
                         :useBinaryPkgCache ,lsp-go-use-binary-pkg-cache))
 
-(lsp-define-stdio-client lsp-go "go" #'(lambda () default-directory)
+(lsp-define-stdio-client lsp-go "go" nil
                          `(,lsp-go-executable-path
                            "-mode=stdio"
                            ,@lsp-go-language-server-flags)
